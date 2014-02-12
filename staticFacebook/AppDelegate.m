@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "mainViewController.h"
+
+//HEx color?
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 
 @implementation AppDelegate
 
@@ -14,6 +19,31 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    mainViewController *vc = [[mainViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nvc;
+    
+    
+//    Color status bar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    //background color of navigation bar
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x4463a1)];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // font style of the title
+    
+     NSShadow *shadow = [[NSShadow alloc] init];
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+     [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+     shadow, NSShadowAttributeName,
+     [UIFont fontWithName:@"HelveticaNeue-Medium" size:17.0], NSFontAttributeName, nil]];
+    
+    //color of back button
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
