@@ -11,6 +11,7 @@
 @interface mainViewController ()
 @property (weak, nonatomic) IBOutlet UIView *cardBackground;
 @property (weak, nonatomic) IBOutlet UIImageView *storyPhoto;
+@property (weak, nonatomic) IBOutlet UIView *commentBar;
 - (IBAction)onTap:(id)sender;
 
 @end
@@ -60,8 +61,10 @@
     self.storyPhoto.layer.shadowOffset = CGSizeMake(0,1);
     self.storyPhoto.layer.shadowOpacity = .4;
     self.storyPhoto.layer.shadowRadius = 2;
-    
-    
+
+// Comment Bar border
+    self.commentBar.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.2].CGColor;
+    self.commentBar.layer.borderWidth = 1;
     
 
     
