@@ -48,7 +48,7 @@
 //  Card bg styling
     
     self.cardBackground.layer.borderColor = [UIColor colorWithRed:0.7450980392 green:0.7568627451 blue:0.7764705882 alpha:1].CGColor;
-    self.cardBackground.layer.borderWidth = 1;
+    self.cardBackground.layer.borderWidth = .5;
     self.cardBackground.layer.cornerRadius = 4;
     self.cardBackground.layer.shadowColor = [UIColor blackColor].CGColor;
     self.cardBackground.layer.shadowOffset = CGSizeMake(0,2);
@@ -64,7 +64,7 @@
 
 // Comment Bar border
     self.commentBar.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.2].CGColor;
-    self.commentBar.layer.borderWidth = 1;
+    self.commentBar.layer.borderWidth = .5;
     
 
     
