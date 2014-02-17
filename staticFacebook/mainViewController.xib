@@ -55,8 +55,8 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-Ac-gO8">
-                            <rect key="frame" x="0.0" y="343" width="300" height="40"/>
+                        <view clipsSubviews="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-Ac-gO8" userLabel="UFI">
+                            <rect key="frame" x="1" y="343" width="298" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ufiBackground" translatesAutoresizingMaskIntoConstraints="NO" id="TfM-SQ-nBn">
