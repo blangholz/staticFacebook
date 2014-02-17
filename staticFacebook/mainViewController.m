@@ -22,8 +22,6 @@
 @end
 
 
-
-
 @implementation mainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
