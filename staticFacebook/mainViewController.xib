@@ -10,6 +10,7 @@
                 <outlet property="cardBorder" destination="NVy-Qv-1ub" id="vYp-7N-Au5"/>
                 <outlet property="commentBar" destination="5Lz-tq-WhZ" id="fP7-F3-P0h"/>
                 <outlet property="storyPhoto" destination="mce-XP-lYp" id="Kgf-Bv-VAj"/>
+                <outlet property="textField" destination="Tmm-gq-nOp" id="FUC-EQ-w9P"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -155,8 +156,8 @@
                     <rect key="frame" x="-18" y="480" width="338" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tmm-gq-nOp">
-                            <rect key="frame" x="58" y="7" width="215" height="30"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a comment..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tmm-gq-nOp">
+                            <rect key="frame" x="58" y="7" width="215" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>

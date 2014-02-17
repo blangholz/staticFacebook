@@ -13,11 +13,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *storyPhoto;
 @property (weak, nonatomic) IBOutlet UIView *commentBar;
 @property (weak, nonatomic) IBOutlet UIView *cardBorder;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 - (IBAction)onTap:(id)sender;
 
-// Declare some methods that will be called when the keyboard is about to be shown or hidden
-- (void)willShowKeyboard:(NSNotification *)notification;
-- (void)willHideKeyboard:(NSNotification *)notification;
 
 @end
 
@@ -79,10 +77,25 @@
     self.storyPhoto.layer.shadowOpacity = .4;
     self.storyPhoto.layer.shadowRadius = 2;
 
-// Comment Bar border
+// UFI Bar border
     self.commentBar.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.2].CGColor;
     self.commentBar.layer.borderWidth = .5;
     
+//Text Field asset
+    
+    //define image
+    UIImage *textFieldImage = [[UIImage imageNamed:@"textFieldStrech2@2x.png" ] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    
+    [self.textField setBackground:textFieldImage];
+    
+    
+//text field padding
+
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 8, 20)];
+    self.textField.leftView = paddingView;
+    self.textField.rightView = paddingView;
+    self.textField.leftViewMode = UITextFieldViewModeAlways;
+    self.textField.rightViewMode = UITextFieldViewModeAlways;
 
     
 }
