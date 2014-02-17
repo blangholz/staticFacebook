@@ -48,7 +48,7 @@
     
     //Fake back button
     
-//    UIImage* image3 = [UIImage imageNamed:@"mail-48_24.png"];
+//    UIImage* image3 = [UIImage imageNamed:@"backButton.png"];
 //    CGRect frameimg = CGRectMake(0, 0, image3.size.width, image3.size.height);
 //    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
 //    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
