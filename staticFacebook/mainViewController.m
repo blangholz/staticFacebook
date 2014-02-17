@@ -48,17 +48,13 @@
     
     //Fake back button
     
-//    UIImage* image3 = [UIImage imageNamed:@"backButton.png"];
-//    CGRect frameimg = CGRectMake(0, 0, image3.size.width, image3.size.height);
-//    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
-//    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
-//    [someButton addTarget:self action:@selector(sendmail)
-//         forControlEvents:UIControlEventTouchUpInside];
-//    [someButton setShowsTouchWhenHighlighted:YES];
-//    
-//    UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
-//    self.navigationItem.rightBarButtonItem=mailbutton;
-//    [someButton release];
+    UIImage* backButtonImage = [UIImage imageNamed:@"backButton.png"];
+    CGRect frameimg = CGRectMake(0, 0, backButtonImage.size.width, backButtonImage.size.height);
+    UIButton *backButton = [[UIButton alloc] initWithFrame:frameimg];
+    [backButton setBackgroundImage:backButtonImage forState:UIControlStateNormal];
+    
+    UIBarButtonItem *backButtonNav =[[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem=backButtonNav;
     
     
     //share button
