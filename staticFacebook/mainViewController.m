@@ -12,9 +12,17 @@
 @property (weak, nonatomic) IBOutlet UIView *cardBackground;
 @property (weak, nonatomic) IBOutlet UIImageView *storyPhoto;
 @property (weak, nonatomic) IBOutlet UIView *commentBar;
+@property (weak, nonatomic) IBOutlet UIView *cardBorder;
 - (IBAction)onTap:(id)sender;
 
+// Declare some methods that will be called when the keyboard is about to be shown or hidden
+- (void)willShowKeyboard:(NSNotification *)notification;
+- (void)willHideKeyboard:(NSNotification *)notification;
+
 @end
+
+
+
 
 @implementation mainViewController
 
@@ -38,6 +46,21 @@
     
     self.title = @"Post";
     
+    //Fake back button
+    
+//    UIImage* image3 = [UIImage imageNamed:@"mail-48_24.png"];
+//    CGRect frameimg = CGRectMake(0, 0, image3.size.width, image3.size.height);
+//    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+//    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+//    [someButton addTarget:self action:@selector(sendmail)
+//         forControlEvents:UIControlEventTouchUpInside];
+//    [someButton setShowsTouchWhenHighlighted:YES];
+//    
+//    UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+//    self.navigationItem.rightBarButtonItem=mailbutton;
+//    [someButton release];
+    
+    
     //share button
     
     UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:nil];
@@ -46,14 +69,14 @@
     self.navigationItem.rightBarButtonItems = actionButtonItems;
     
 //  Card bg styling
-    
-    self.cardBackground.layer.borderColor = [UIColor colorWithRed:0.7450980392 green:0.7568627451 blue:0.7764705882 alpha:1].CGColor;
-    self.cardBackground.layer.borderWidth = .5;
-    self.cardBackground.layer.cornerRadius = 4;
-    self.cardBackground.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.cardBackground.layer.shadowOffset = CGSizeMake(0,2);
-    self.cardBackground.layer.shadowOpacity = .05;
-    self.cardBackground.layer.shadowRadius = 4;
+
+    self.cardBorder.layer.borderColor = [UIColor colorWithRed:0.7450980392 green:0.7568627451 blue:0.7764705882 alpha:1].CGColor;
+    self.cardBorder.layer.borderWidth = .5;
+    self.cardBorder.layer.cornerRadius = 4;
+    self.cardBorder.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.cardBorder.layer.shadowOffset = CGSizeMake(0,2);
+    self.cardBorder.layer.shadowOpacity = .05;
+    self.cardBorder.layer.shadowRadius = 4;
     
 //  Photo shadow
     
