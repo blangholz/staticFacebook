@@ -163,5 +163,13 @@
 
 - (IBAction)onTap:(id)sender {
     [self.view endEditing:YES];
+    
+    CGRect frame = self.commentBar.frame;
+    frame.origin.y = 502 - frame.size.height/2;
+    
+    [UIView animateWithDuration:.2
+                     animations:^{
+        self.commentBar.frame = frame;
+    }];
 }
 @end
