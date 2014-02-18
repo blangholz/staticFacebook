@@ -127,6 +127,7 @@
     NSNumber *curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey];
     UIViewAnimationCurve animationCurve = curveValue.intValue;
     
+    
     // Move the view with the same duration and animation curve so that it will match with the keyboard animation
     [UIView animateWithDuration:animationDuration
                           delay:0.018
@@ -167,7 +168,7 @@
     CGRect frame = self.commentBar.frame;
     frame.origin.y = 502 - frame.size.height/2;
     
-    [UIView animateWithDuration:.2
+    [UIView animateWithDuration:.15
                      animations:^{
         self.commentBar.frame = frame;
     }];
