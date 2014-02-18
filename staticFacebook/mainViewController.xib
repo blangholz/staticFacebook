@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="cardBackground" destination="flz-C8-yyc" id="gJd-z8-l4a"/>
                 <outlet property="cardBorder" destination="NVy-Qv-1ub" id="vYp-7N-Au5"/>
-                <outlet property="commentBar" destination="5Lz-tq-WhZ" id="fP7-F3-P0h"/>
+                <outlet property="commentBar" destination="5Lz-tq-WhZ" id="KuH-Ys-dqk"/>
                 <outlet property="storyPhoto" destination="mce-XP-lYp" id="Kgf-Bv-VAj"/>
                 <outlet property="textField" destination="Tmm-gq-nOp" id="FUC-EQ-w9P"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -152,25 +152,25 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Lz-tq-WhZ">
-                    <rect key="frame" x="-18" y="480" width="338" height="44"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Lz-tq-WhZ" userLabel="commentBar">
+                    <rect key="frame" x="0.0" y="480" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a comment..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tmm-gq-nOp">
-                            <rect key="frame" x="58" y="7" width="215" height="32"/>
+                            <rect key="frame" x="41" y="6" width="215" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNe-aR-7bO">
-                            <rect key="frame" x="287" y="12" width="40" height="20"/>
+                            <rect key="frame" x="270" y="12" width="40" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="commentCamera" translatesAutoresizingMaskIntoConstraints="NO" id="JlG-bV-8l7">
-                            <rect key="frame" x="17" y="4" width="42" height="36"/>
+                            <rect key="frame" x="0.0" y="4" width="42" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
@@ -186,7 +186,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
-                <outletCollection property="gestureRecognizers" destination="gdF-e9-t1x" appends="YES" id="2N3-ZW-0of"/>
+                <outletCollection property="gestureRecognizers" destination="YS1-8q-dCP" appends="YES" id="haw-uj-QNk"/>
             </connections>
         </view>
         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SXT-PZ-sz1">
@@ -196,9 +196,9 @@
             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
             <nil key="highlightedColor"/>
         </label>
-        <tapGestureRecognizer id="gdF-e9-t1x">
+        <tapGestureRecognizer id="YS1-8q-dCP">
             <connections>
-                <action selector="onTap:" destination="-1" id="rwf-z3-DxX"/>
+                <action selector="onTap:" destination="-1" id="5Ue-J1-H7z"/>
             </connections>
         </tapGestureRecognizer>
     </objects>
