@@ -70,7 +70,7 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
     
     Notifications *notification2 = self.notifications[indexPath.row];
-    cell.textLabel.title = notifications.text;
+    cell.textLabel.text = notification2.text;
     
     return cell;
 }
