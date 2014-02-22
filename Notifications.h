@@ -15,4 +15,7 @@
 @property (nonatomic, strong) NSString *profilePicUrl;
 @property (nonatomic, strong) NSString *iconUrl;
 
+- (id)initWithDictionary:(NSDictionary *)dictionary;
++ (NSArray *)fakeNotifications;
+
 @end

@@ -12,7 +12,7 @@
 @interface NotificationViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *notifications;
+@property (nonatomic, strong) NSArray *notifications;
 
 @end
 
@@ -23,20 +23,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
-        //NOTIFICATIONS
-        self.notifications = [[NSMutableArray alloc] init];
-        
-        Notifications *kyleHomework = [[Notifications alloc] init];
-        kyleHomework.text = @"Kyle Meyer posted in iOS Bootcamp for Designers: Homework description isn't sup...";
         self.title = @"Notifications";
-        [self.notifications addObject:kyleHomework];
-        
-        Notifications *stuartPretty = [[Notifications alloc] init];
-        stuartPretty.text = @"Pretty great view!";
-        self.title = @"Notifications";
-        [self.notifications addObject:stuartPretty];
-        
+        //CALL NOTIFICATIONS
+        self.notifications = [Notifications fakeNotifications];
     }
     return self;
 }
@@ -52,6 +41,7 @@
     //table view
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.rowHeight = 80 ;
 }
 
 - (void)didReceiveMemoryWarning
