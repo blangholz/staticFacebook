@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "mainViewController.h"
+#import "requestsViewController.h"
+#import "messengerViewController.h"
+#import "NotificationViewController.h"
+#import "moreViewController.h"
 
 //HEx color?
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
@@ -21,9 +25,28 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    mainViewController *vc = [[mainViewController alloc] init];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
-    self.window.rootViewController = nvc;
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    mainViewController *postViewController = [[mainViewController alloc] init];
+    UINavigationController *postNavigationController = [[UINavigationController alloc] initWithRootViewController:postViewController];
+    
+    requestsViewController *requestViewController = [[requestsViewController alloc] init];
+    UINavigationController *requestNavigationController = [[UINavigationController alloc] initWithRootViewController:requestViewController];
+
+    messengerViewController *messengerViewController2 = [[messengerViewController alloc] init];
+    UINavigationController *messengerNavigationController = [[UINavigationController alloc] initWithRootViewController:messengerViewController2];
+    
+    NotificationViewController *notificationViewController = [[NotificationViewController alloc] init];
+    UINavigationController *notificationNavigationController = [[UINavigationController alloc] initWithRootViewController:notificationViewController];
+    
+    moreViewController *moreViewController2 = [[moreViewController alloc] init];
+    UINavigationController *moreNavigationController = [[UINavigationController alloc] initWithRootViewController:moreViewController2];
+    
+    
+    tabBarController.viewControllers = @[postNavigationController, requestNavigationController, messengerNavigationController, notificationNavigationController, moreNavigationController];
+    
+    
+    self.window.rootViewController = tabBarController;
     
     
 //    Color status bar

@@ -41,7 +41,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
 
     
 //  Nav Bar style
@@ -103,6 +102,10 @@
     self.textField.leftViewMode = UITextFieldViewModeAlways;
     self.textField.rightViewMode = UITextFieldViewModeAlways;
 
+    //Tab bar
+    
+    self.navigationController.tabBarItem.title = @"News Feed";
+    self.navigationController.tabBarItem.image = [UIImage imageNamed:@"newsFeedIcon"];
 
 }
 
