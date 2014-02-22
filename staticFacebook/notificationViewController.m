@@ -8,7 +8,9 @@
 
 #import "notificationViewController.h"
 #import "Notifications.h"
-#import "MovieCell.h"
+#import "NotificationCell.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface notificationViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -36,8 +38,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    UINib *movieNib = [UINib nibWithNibName:@"MovieCell" bundle:nil];
-    [self.tableView registerNib:movieNib forCellReuseIdentifier:@"MovieCell"];
+    UINib *notificationNib = [UINib nibWithNibName:@"NotificationCell" bundle:nil];
+    [self.tableView registerNib:notificationNib forCellReuseIdentifier:@"NotificationCell"];
     
 }
 
@@ -54,15 +56,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
+    NotificationCell *notificationCell = [tableView dequeueReusableCellWithIdentifier:@"NotificationCell"];
     
     Notifications *notifications = self.notifications[indexPath.row];
-    MovieCell.movieTitleLabel.text = notifications.title;
+    NotificationCell.movieTitleLabel.text = notifications.title;
     
     NSURL *url = [NSURL URLWithString:notifications.posterUrl];
-    [MovieCell.posterImageView setImageWithURL:url];
+    [NotificationCell.posterImageView setImageWithURL:url];
     
-    return movieCell;
+    return notificationCell;
 }
 
 @end

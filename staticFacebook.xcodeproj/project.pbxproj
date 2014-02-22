@@ -107,6 +107,7 @@
 		4ADE032718B2DD55009A63C5 /* textFieldStrech3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE032518B2DD55009A63C5 /* textFieldStrech3.png */; };
 		4ADE032B18B2DE5F009A63C5 /* textFieldStrech4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE032918B2DE5F009A63C5 /* textFieldStrech4@2x.png */; };
 		4ADE032C18B2DE5F009A63C5 /* textFieldStrech4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE032A18B2DE5F009A63C5 /* textFieldStrech4.png */; };
+		B56EEACC18B862A700B4AEAA /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56EEACB18B862A700B4AEAA /* NotificationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +293,7 @@
 		4ADE032518B2DD55009A63C5 /* textFieldStrech3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textFieldStrech3.png; sourceTree = "<group>"; };
 		4ADE032918B2DE5F009A63C5 /* textFieldStrech4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textFieldStrech4@2x.png"; sourceTree = "<group>"; };
 		4ADE032A18B2DE5F009A63C5 /* textFieldStrech4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textFieldStrech4.png; sourceTree = "<group>"; };
+		B56EEACB18B862A700B4AEAA /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 				4A0CCD6B18B7DA3700B80CD5 /* MovieCell.xib */,
 				4A0CCC7D18B7D57D00B80CD5 /* NotificationCell.h */,
 				4A0CCC7E18B7D57D00B80CD5 /* NotificationCell.m */,
+				B56EEACB18B862A700B4AEAA /* NotificationCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 				4A0CCC7718B7CFDE00B80CD5 /* notificationViewController.xib in Resources */,
 				4A0CCD2B18B7D99900B80CD5 /* MainMenu.xib in Resources */,
 				4A0CCD2C18B7D99900B80CD5 /* Icon.png in Resources */,
+				B56EEACC18B862A700B4AEAA /* NotificationCell.xib in Resources */,
 				4A057E8218B29DEC000FA7E4 /* backButton.png in Resources */,
 				4A0CCD1118B7D99900B80CD5 /* .gitignore in Resources */,
 				4A0CCD1C18B7D99900B80CD5 /* AFNetworking.podspec in Resources */,
