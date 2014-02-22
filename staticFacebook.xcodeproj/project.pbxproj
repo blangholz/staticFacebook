@@ -20,6 +20,7 @@
 		4A47DB4E18B957B5006E14D9 /* ios7_tabbar_notificationsicon_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A47DB4218B957B5006E14D9 /* ios7_tabbar_notificationsicon_normal@2x.png */; };
 		4A47DB4F18B957B5006E14D9 /* ios7_tabbar_requestsicon_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A47DB4318B957B5006E14D9 /* ios7_tabbar_requestsicon_normal.png */; };
 		4A47DB5018B957B5006E14D9 /* ios7_tabbar_requestsicon_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A47DB4418B957B5006E14D9 /* ios7_tabbar_requestsicon_normal@2x.png */; };
+		4A47DB5418B95B22006E14D9 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A47DB5318B95B22006E14D9 /* Notifications.m */; };
 		4A91195218AB2FA800DAA1A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A91195118AB2FA800DAA1A5 /* Foundation.framework */; };
 		4A91195418AB2FA800DAA1A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A91195318AB2FA800DAA1A5 /* CoreGraphics.framework */; };
 		4A91195618AB2FA800DAA1A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A91195518AB2FA800DAA1A5 /* UIKit.framework */; };
@@ -71,6 +72,8 @@
 		4A47DB4218B957B5006E14D9 /* ios7_tabbar_notificationsicon_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7_tabbar_notificationsicon_normal@2x.png"; sourceTree = "<group>"; };
 		4A47DB4318B957B5006E14D9 /* ios7_tabbar_requestsicon_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios7_tabbar_requestsicon_normal.png; sourceTree = "<group>"; };
 		4A47DB4418B957B5006E14D9 /* ios7_tabbar_requestsicon_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7_tabbar_requestsicon_normal@2x.png"; sourceTree = "<group>"; };
+		4A47DB5218B95B22006E14D9 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		4A47DB5318B95B22006E14D9 /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
 		4A91194E18AB2FA800DAA1A5 /* staticFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = staticFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A91195118AB2FA800DAA1A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A91195318AB2FA800DAA1A5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,9 +153,19 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		4A47DB5118B95B05006E14D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A47DB5218B95B22006E14D9 /* Notifications.h */,
+				4A47DB5318B95B22006E14D9 /* Notifications.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		4A91194518AB2FA800DAA1A5 = {
 			isa = PBXGroup;
 			children = (
+				4A47DB5118B95B05006E14D9 /* Models */,
 				4A47DB3818B957A8006E14D9 /* Images */,
 				4A91195718AB2FA800DAA1A5 /* staticFacebook */,
 				4A91197018AB2FA800DAA1A5 /* staticFacebookTests */,
@@ -360,6 +373,7 @@
 				B55C6DBB18B8816C0007DB31 /* moreViewController.m in Sources */,
 				B55C6DAC18B87DDD0007DB31 /* NotificationViewController.m in Sources */,
 				B55C6DB618B881620007DB31 /* messengerViewController.m in Sources */,
+				4A47DB5418B95B22006E14D9 /* Notifications.m in Sources */,
 				4A91196218AB2FA800DAA1A5 /* AppDelegate.m in Sources */,
 				B55C6DB118B881560007DB31 /* requestsViewController.m in Sources */,
 				4A91195E18AB2FA800DAA1A5 /* main.m in Sources */,
