@@ -29,19 +29,24 @@
     
     mainViewController *postViewController = [[mainViewController alloc] init];
     UINavigationController *postNavigationController = [[UINavigationController alloc] initWithRootViewController:postViewController];
+    postNavigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_feedicon_normal.png"];
     
     requestsViewController *requestViewController = [[requestsViewController alloc] init];
     UINavigationController *requestNavigationController = [[UINavigationController alloc] initWithRootViewController:requestViewController];
+    requestNavigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_requestsicon_normal.png"];
+    
 
     messengerViewController *messengerViewController2 = [[messengerViewController alloc] init];
     UINavigationController *messengerNavigationController = [[UINavigationController alloc] initWithRootViewController:messengerViewController2];
+    messengerNavigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_messengericon_normal.png"];
     
     NotificationViewController *notificationViewController = [[NotificationViewController alloc] init];
     UINavigationController *notificationNavigationController = [[UINavigationController alloc] initWithRootViewController:notificationViewController];
+    notificationNavigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_notificationsicon_normal.png"];
     
     moreViewController *moreViewController2 = [[moreViewController alloc] init];
     UINavigationController *moreNavigationController = [[UINavigationController alloc] initWithRootViewController:moreViewController2];
-    
+    moreNavigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_moreicon_normal.png"];
     
     tabBarController.viewControllers = @[postNavigationController, requestNavigationController, messengerNavigationController, notificationNavigationController, moreNavigationController];
     

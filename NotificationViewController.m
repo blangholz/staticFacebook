@@ -31,7 +31,7 @@
     
     
     //Tab bar
-    self.navigationController.tabBarItem.image = [UIImage imageNamed:@"newsFeedIcon"];
+    self.navigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_notificationsicon_normal.png"];
 }
 
 - (void)didReceiveMemoryWarning

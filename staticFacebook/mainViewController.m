@@ -105,7 +105,6 @@
     //Tab bar
     
     self.navigationController.tabBarItem.title = @"News Feed";
-    self.navigationController.tabBarItem.image = [UIImage imageNamed:@"newsFeedIcon"];
 
 }
 

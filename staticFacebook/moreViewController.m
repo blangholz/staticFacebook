@@ -28,9 +28,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    //Tab bar
-    self.navigationController.tabBarItem.image = [UIImage imageNamed:@"newsFeedIcon"];
-    
 }
 
 - (void)didReceiveMemoryWarning
