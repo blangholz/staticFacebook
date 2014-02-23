@@ -72,12 +72,12 @@
     
     notificationCell.timestamp.text = notification.timestampTime;
 
-    NSURL *icon = [NSURL URLWithString:notification.iconUrl];
-    [notificationCell.icon setImageWithURL:icon];
+//    NSURL *icon = [NSURL URLWithString:notification.iconUrl];
+//    [notificationCell.icon setImageWithURL:icon];
 
     
-//    UIImage *groupIcon = [UIImage imageNamed:notification.iconUrl];
-//    notificationCell.icon = [[UIImageView alloc] initWithImage:groupIcon];
+    UIImage *groupIcon = [UIImage imageNamed:notification.iconUrl];
+    notificationCell.icon = [[UIImageView alloc] initWithImage:groupIcon];
     
 //    notificationCell.icon = [[UIImageView alloc] initWithImage:groupIcon];
     
