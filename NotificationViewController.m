@@ -9,6 +9,7 @@
 #import "NotificationViewController.h"
 #import "Notifications.h"
 #import "NotificationCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface NotificationViewController ()
 
@@ -65,6 +66,27 @@
 
     Notifications *notification = self.notifications[indexPath.row];
     notificationCell.notificationText.text = notification.text;
+    
+    NSURL *profileUrl = [NSURL URLWithString:notification.profilePicUrl];
+    [notificationCell.profilePic setImageWithURL:profileUrl];
+    
+    notificationCell.timestamp.text = notification.timestampTime;
+
+    NSURL *icon = [NSURL URLWithString:notification.iconUrl];
+    [notificationCell.icon setImageWithURL:icon];
+
+    
+//    UIImage *groupIcon = [UIImage imageNamed:notification.iconUrl];
+//    notificationCell.icon = [[UIImageView alloc] initWithImage:groupIcon];
+    
+//    notificationCell.icon = [[UIImageView alloc] initWithImage:groupIcon];
+    
+//    notificationCell.icon = notification.iconUrl;
+    
+//    UIImage *coffee = [UIImage imageNamed:@"coffee.png"];
+//    UIImageView *profilePic = [[UIImageView alloc] initWithImage:coffee];
+
+    
     
     return notificationCell;
 }

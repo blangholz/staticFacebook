@@ -11,7 +11,7 @@
 @interface Notifications : NSObject
 
 @property (nonatomic, strong) NSString *text;
-@property (nonatomic, strong) NSDate *timestamp;
+@property (nonatomic, strong) NSString *timestampTime;
 @property (nonatomic, strong) NSString *profilePicUrl;
 @property (nonatomic, strong) NSString *iconUrl;
 

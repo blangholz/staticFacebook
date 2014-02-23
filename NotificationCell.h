@@ -12,6 +12,8 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *notificationText;
 @property (nonatomic, weak) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UILabel *timestamp;
+@property (weak, nonatomic) IBOutlet UIImageView *icon;
 
 
 @end

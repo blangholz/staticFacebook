@@ -24,8 +24,12 @@
     NSMutableArray *notifications = [[NSMutableArray alloc] init];
     
     NSDictionary *kyleHomework =
-    @{@"text" : @"Kyle Meyer posted in iOS Bootcamp for Designers: Homework description isn't sup...",
-      @"profilePicUrl" : @"..."};
+    @{
+      @"text" : @"Kyle Meyer posted in iOS Bootcamp for Designers: Homework description isn't sup...",
+      @"profilePicUrl" : @"https://scontent-1.32934.fna.fbcdn.net/hprofile-ash3/t1/c29.29.360.360/s320x320/546965_10100635578478038_1162724826_n.jpg",
+      @"timestampTime" : @"32 minutes ago",
+      @"iconUrl" : @"https://scontent-1.32934.fna.fbcdn.net/hprofile-ash3/t1/c39.39.489.489/s320x320/994566_10151571817020658_1948956680_n.jpg",
+      };
     Notifications *notification = [[Notifications alloc] initWithDictionary:kyleHomework];
     [notifications addObject: notification];
     
