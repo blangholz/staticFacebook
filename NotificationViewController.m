@@ -40,13 +40,12 @@
     self.navigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_notificationsicon_normal.png"];
     
     //table view
-    
-    UINib *NotificationNib = [UINib nibWithNibName:@"NotificationCell" bundle:nil];
-    [self.tableView registerNib:NotificationNib forCellReuseIdentifier:@"NotificationCell"];
-    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.rowHeight = 80 ;
+
+    UINib *notificationNib = [UINib nibWithNibName:@"NotificationCell" bundle:nil];
+    [self.tableView registerNib:notificationNib forCellReuseIdentifier:@"NotificationCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +64,7 @@
     NotificationCell *notificationCell = [tableView dequeueReusableCellWithIdentifier:@"NotificationCell"];
 
     Notifications *notification = self.notifications[indexPath.row];
-    notificationCell.notificationText = notification.text;
+    notificationCell.notificationText.text = notification.text;
     
     return notificationCell;
 }
