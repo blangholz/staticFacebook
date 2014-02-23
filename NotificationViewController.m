@@ -8,6 +8,7 @@
 
 #import "NotificationViewController.h"
 #import "Notifications.h"
+#import "NotificationCell.h"
 
 @interface NotificationViewController ()
 
@@ -34,11 +35,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
+    
     //Tab bar
     self.navigationController.tabBarItem.image = [UIImage imageNamed:@"ios7_tabbar_notificationsicon_normal.png"];
     
     //table view
+    
+    UINib *NotificationNib = [UINib nibWithNibName:@"NotificationCell" bundle:nil];
+    [self.tableView registerNib:NotificationNib forCellReuseIdentifier:@"NotificationCell"];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.rowHeight = 80 ;
@@ -57,12 +62,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Nil];
+    NotificationCell *notificationCell = [tableView dequeueReusableCellWithIdentifier:@"NotificationCell"];
+
+    Notifications *notification = self.notifications[indexPath.row];
+    notificationCell.notificationText = notification.text;
     
-    Notifications *notification2 = self.notifications[indexPath.row];
-    cell.textLabel.text = notification2.text;
-    
-    return cell;
+    return notificationCell;
 }
 
 @end
