@@ -57,6 +57,14 @@
     
     UIBarButtonItem *searchButtonNav =[[UIBarButtonItem alloc] initWithCustomView:searchButton];
     self.navigationItem.leftBarButtonItem=searchButtonNav;
+    
+    UIImage* divebarButtonImage = [UIImage imageNamed:@"divebarIcon"];
+    CGRect frameimg2 = CGRectMake(0, 0, divebarButtonImage.size.width, divebarButtonImage.size.height);
+    UIButton *divebarButton = [[UIButton alloc] initWithFrame:frameimg2];
+    [searchButton setBackgroundImage:divebarButtonImage forState:UIControlStateNormal];
+    
+    UIBarButtonItem *divebarButtonNav =[[UIBarButtonItem alloc] initWithCustomView:divebarButton];
+    self.navigationItem.rightBarButtonItem=divebarButtonNav;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +86,7 @@
     Notifications *notification = self.notifications[indexPath.row];
     
     // This is a string that you might find in your model
-    NSString *html = @"This is <b>bold</b>";
+//    NSString *html = @"This is <b>bold</b>";
     
     // Apply some inline CSS
     NSString *styledText = [self styledHTMLwithHTML:notification.text];
@@ -86,11 +94,8 @@
     // Generate an attributed string from the HTML
     NSAttributedString *attributedText = [self attributedStringWithHTML:styledText];
     
-    // Set the attributedText property of the UILabel
-//    label.attributedText = attributedText;
     
-    
-    notificationCell.notificationText.text = notification.text;
+    notificationCell.notificationText.attributedText = attributedText;
     
 
 //    notificationCell.notificationText.text = notification.text;
@@ -119,7 +124,7 @@
     return notificationCell;
 }
 - (NSString *)styledHTMLwithHTML:(NSString *)HTML {
-    NSString *style = @"<meta charset=\"UTF-8\"><style> body { font-family: 'HelveticaNeue'; font-size: 20px; } b {font-family: 'MarkerFelt-Wide'; }</style>";
+    NSString *style = @"<meta charset=\"UTF-8\"><style> body { font-family: 'HelveticaNeue'; font-size: 14px; } b {font-family: 'HelveticaNeue-Bold'; }</style>";
     
     return [NSString stringWithFormat:@"%@%@", style, HTML];
 }
