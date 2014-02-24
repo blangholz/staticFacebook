@@ -168,7 +168,7 @@
     [self.view endEditing:YES];
     
     CGRect frame = self.commentBar.frame;
-    frame.origin.y = 502 - frame.size.height/2;
+    frame.origin.y = 497 - frame.size.height/2;
     
     [UIView animateWithDuration:.15
                      animations:^{

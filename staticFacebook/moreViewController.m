@@ -10,6 +10,9 @@
 
 @interface moreViewController ()
 
+@property (nonatomic, strong) UIScrollView *scrollArea;
+
+
 @end
 
 @implementation moreViewController
@@ -26,7 +29,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.scrollArea = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.scrollArea];
+    
+    UIImage *moreTabScreenshot = [UIImage imageNamed:@"moretab"];
+    UIImageView *moreTab = [[UIImageView alloc] initWithImage:moreTabScreenshot];
+    moreTab.backgroundColor = [UIColor blackColor];
+    [moreTab setFrame:CGRectMake(0, 64, 320, 918)];
+//    [self.view  addSubview:moreTab];
+    
+    [self.scrollArea addSubview: moreTab];
+    self.scrollArea.clipsToBounds = NO;
+    
+    self.scrollArea.contentSize=CGSizeMake(320,918);
     
 }
 
