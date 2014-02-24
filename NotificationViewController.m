@@ -47,6 +47,16 @@
 
     UINib *notificationNib = [UINib nibWithNibName:@"NotificationCell" bundle:nil];
     [self.tableView registerNib:notificationNib forCellReuseIdentifier:@"NotificationCell"];
+    
+    //Nav Bar
+    
+    UIImage* searchButtonImage = [UIImage imageNamed:@"searchIcon"];
+    CGRect frameimg = CGRectMake(0, 0, searchButtonImage.size.width, searchButtonImage.size.height);
+    UIButton *searchButton = [[UIButton alloc] initWithFrame:frameimg];
+    [searchButton setBackgroundImage:searchButtonImage forState:UIControlStateNormal];
+    
+    UIBarButtonItem *searchButtonNav =[[UIBarButtonItem alloc] initWithCustomView:searchButton];
+    self.navigationItem.leftBarButtonItem=searchButtonNav;
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,6 +91,9 @@
     
     
     notificationCell.notificationText.text = notification.text;
+    
+
+//    notificationCell.notificationText.text = notification.text;
     
     NSURL *profileUrl = [NSURL URLWithString:notification.profilePicUrl];
     [notificationCell.profilePic setImageWithURL:profileUrl];
