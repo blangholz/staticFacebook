@@ -61,7 +61,7 @@
     UIImage* divebarButtonImage = [UIImage imageNamed:@"divebarIcon"];
     CGRect frameimg2 = CGRectMake(0, 0, divebarButtonImage.size.width, divebarButtonImage.size.height);
     UIButton *divebarButton = [[UIButton alloc] initWithFrame:frameimg2];
-    [searchButton setBackgroundImage:divebarButtonImage forState:UIControlStateNormal];
+    [divebarButton setBackgroundImage:divebarButtonImage forState:UIControlStateNormal];
     
     UIBarButtonItem *divebarButtonNav =[[UIBarButtonItem alloc] initWithCustomView:divebarButton];
     self.navigationItem.rightBarButtonItem=divebarButtonNav;
