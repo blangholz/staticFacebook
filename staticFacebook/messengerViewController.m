@@ -10,6 +10,8 @@
 
 @interface messengerViewController ()
 
+@property (nonatomic, strong) UIScrollView *scrollArea;
+
 @end
 
 @implementation messengerViewController
@@ -28,6 +30,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.scrollArea = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.scrollArea];
+    
+    UIImage *messengerTabScreenshot = [UIImage imageNamed:@"messengerTab"];
+    UIImageView *messengerTab = [[UIImageView alloc] initWithImage:messengerTabScreenshot];
+    messengerTab.backgroundColor = [UIColor blackColor];
+    [messengerTab setFrame:CGRectMake(0, 64, 320, 882)];
+    //    [self.view  addSubview:moreTab];
+    
+    [self.scrollArea addSubview: messengerTab];
+    self.scrollArea.clipsToBounds = NO;
+    
+    //How do I set this based on requestTab height??
+    self.scrollArea.contentSize=CGSizeMake(320,882);
+    
 }
 
 - (void)didReceiveMemoryWarning
