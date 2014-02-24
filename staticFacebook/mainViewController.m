@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIView *commentBar;
 @property (weak, nonatomic) IBOutlet UIView *cardBorder;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic, strong) UIScrollView *scrollArea;
+
 // Declare some methods that will be called when the keyboard is about to be shown or hidden
 - (void)willShowKeyboard:(NSNotification *)notification;
 //- (void)willHideKeyboard:(NSNotification *)notification;
@@ -105,6 +107,16 @@
     //Tab bar
     
     self.navigationController.tabBarItem.title = @"News Feed";
+    
+
+    
+//    self.scrollArea = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+//    [self.view addSubview:self.scrollArea];
+//    
+//    [self.scrollArea addSubview: self.cardBackground];
+//    self.scrollArea.clipsToBounds = NO;
+//    
+//    self.scrollArea.contentSize=CGSizeMake(320,1180);
 
 }
 

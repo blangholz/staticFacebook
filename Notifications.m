@@ -95,6 +95,16 @@
       };
     notification = [[Notifications alloc] initWithDictionary:badiShots];
     [notifications addObject: notification];
+
+    NSDictionary *nathanDropbox =
+    @{
+      @"text" : @"<b>Nathan Borror</b> posted in <b>Product Design:</b> I created a Dropbox folder for all of us to share our iOS prototypes.",
+      @"profilePicUrl" : @"https://scontent-1.32934.fna.fbcdn.net/hprofile-frc3/t1/c14.14.172.172/p200x200/249634_10150329996058312_5212641_n.jpg",
+      @"timestampTime" : @"1 hour ago",
+      @"iconUrl" : @"icon-lightbulb",
+      };
+    notification = [[Notifications alloc] initWithDictionary:nathanDropbox];
+    [notifications addObject: notification];
     
     return notifications;
 }
