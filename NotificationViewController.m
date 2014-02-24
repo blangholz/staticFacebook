@@ -63,8 +63,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NotificationCell *notificationCell = [tableView dequeueReusableCellWithIdentifier:@"NotificationCell"];
-
+    
+    
     Notifications *notification = self.notifications[indexPath.row];
+    
+    // This is a string that you might find in your model
+    NSString *html = @"This is <b>bold</b>";
+    
+    // Apply some inline CSS
+    NSString *styledText = [self styledHTMLwithHTML:notification.text];
+    
+    // Generate an attributed string from the HTML
+    NSAttributedString *attributedText = [self attributedStringWithHTML:styledText];
+    
+    // Set the attributedText property of the UILabel
+//    label.attributedText = attributedText;
+    
+    
     notificationCell.notificationText.text = notification.text;
     
     NSURL *profileUrl = [NSURL URLWithString:notification.profilePicUrl];
@@ -77,7 +92,7 @@
 
     
     UIImage *groupIcon = [UIImage imageNamed:notification.iconUrl];
-    notificationCell.icon = [[UIImageView alloc] initWithImage:groupIcon];
+    notificationCell.icon.image = groupIcon;
     
 //    notificationCell.icon = [[UIImageView alloc] initWithImage:groupIcon];
     
@@ -89,6 +104,16 @@
     
     
     return notificationCell;
+}
+- (NSString *)styledHTMLwithHTML:(NSString *)HTML {
+    NSString *style = @"<meta charset=\"UTF-8\"><style> body { font-family: 'HelveticaNeue'; font-size: 20px; } b {font-family: 'MarkerFelt-Wide'; }</style>";
+    
+    return [NSString stringWithFormat:@"%@%@", style, HTML];
+}
+
+- (NSAttributedString *)attributedStringWithHTML:(NSString *)HTML {
+    NSDictionary *options = @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType };
+    return [[NSAttributedString alloc] initWithData:[HTML dataUsingEncoding:NSUTF8StringEncoding] options:options documentAttributes:NULL error:NULL];
 }
 
 @end
